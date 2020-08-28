@@ -22,19 +22,18 @@ func BuildDBConfig() *DBConfig  {
 		Host: "localhost",
 		Port: 5432,
 		User: "postgres",
-		DBName: "ewallet_db",
-		Password: "Postgresql123__",
+		DBName: "chatApp",
+		Password: "papagw809",
 	}
 	return &dbConfig
 }
 
 func DbURL(dbConfig *DBConfig) string {
 	return fmt.Sprintf(
-		"%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=True&loc=Local",
+		"postgres://%s:%s@%s/%s?sslmode=disable",
 		dbConfig.User,
 		dbConfig.Password,
 		dbConfig.Host,
-		dbConfig.Port,
 		dbConfig.DBName,
 	)
 }

@@ -9,14 +9,6 @@ import (
 	_ "github.com/lib/pq"
 )
 
-const (
-	hostname = "localhost"
-	host_port = 5432
-	username = "postgres"
-	password = "Postgresql123__"
-	database_name = "ewallet_db"
-)
-
 var err error
 
 func main(){
